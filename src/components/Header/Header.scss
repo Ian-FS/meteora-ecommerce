@@ -1,8 +1,75 @@
 header {
     background-color: var(--black-primary);
 
+    padding: 20px;
+
     .container__flex {
         display: flex;
         justify-content: space-between;
+
+        .container__nav {
+            display: flex;
+
+            .menu__button {
+                background-color: var(--black-primary);
+                // display: inline-flex;
+                width: 18px;
+                background-image: url("../../assets/menu.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                // padding: 20px;
+            }
+            .menu__nav {
+                display: none;
+                flex-direction: row-reverse;
+                padding: 20px;
+
+                position: absolute;
+                top: 0px;
+                right: 0px;
+
+                background-color: #343a40;
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-bottom: 10px;
+                    }
+                    li:nth-child(2) > a {
+                        color: var(--green-primary);
+                    }
+
+                    .container__botao-fechar {
+                        display: flex;
+                        flex-direction: row-reverse;
+
+                        margin-bottom: 10px;
+
+                        button {
+                            background-color: #343a40;
+                            width: 18px;
+                            height: 18px;
+                            background-image: url("../../assets/menu-fechar.svg");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+
+                    a {
+                        color: var(--white-primary);
+
+                        text-decoration: none;
+                    }
+                    p {
+                        margin-top: 5px;
+                        border: solid 1px var(--gray-primary);
+                    }
+                }
+            }
+            .open {
+                display: flex;
+            }
+        }
     }
 }
