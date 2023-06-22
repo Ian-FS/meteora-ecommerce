@@ -1,1 +1,21 @@
-:root {}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+    --black-primary: #000000;
+    --gray-primary: #cccccc;
+    --green-primary: #daff01;
+    --purple-primary: #9353ff;
+
+    --rose-secondary: #ee6471;
+    --orange-secondary: #f87f46;
+
+    --font-primary: 'Inter', sans-serif;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box
+}
