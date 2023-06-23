@@ -1,0 +1,31 @@
+.search__bar {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--white-primary);
+
+    padding: 20px;
+    gap: 6px;
+
+    input {
+        padding: 12px;
+        border: solid 2px var(--black-primary);
+    }
+    input::placeholder {
+        color: #6c757d;
+
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 13px;
+    }
+    button {
+        border: solid 2px var(--black-primary);
+        background-color: var(--white-primary);
+
+        padding: 9px 12px 9px 12px;
+
+        font-family: var(--font-primary);
+        font-weight: 500;
+        font-size: 16px;
+    }
+}

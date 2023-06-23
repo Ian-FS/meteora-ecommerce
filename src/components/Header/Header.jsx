@@ -9,7 +9,9 @@ export default function Header() {
                         <button onClick={(event) => event.target.nextSibling.classList.toggle("open")} className='menu__button'></button>
                         <nav className='menu__nav'>
                             <ul>
-                                <div className='container__botao-fechar'><button onClick={(event) => event.target.parentNode.parentNode.parentNode.classList.toggle('open')} /></div>
+                                <div className='container__botao-fechar'>
+                                    <button onClick={(event) => event.target.parentNode.parentNode.parentNode.classList.toggle('open')} />
+                                </div>
                                 <li><a href="#">Home</a><p></p></li>
                                 <li><a href="#">Nossas lojas</a><p></p></li>
                                 <li><a href="#">Novidades</a><p></p></li>
