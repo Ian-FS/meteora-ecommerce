@@ -1,16 +1,24 @@
+import { useState } from 'react'
 import './Header.scss'
 export default function Header() {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const handleToggle = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
         <>
             <header>
                 <div className='container__flex'>
                     <img src="/src/assets/logo.svg" alt="logo Meteora" />
                     <div className='container__nav'>
-                        <button onClick={(event) => event.target.nextSibling.classList.toggle("open")} className='menu__button'></button>
-                        <nav className='menu__nav'>
+                        <button onClick={handleToggle} className='menu__button'></button>
+                        <nav className={isOpen ? 'menu__nav open' : 'menu__nav'}>
                             <ul>
                                 <div className='container__botao-fechar'>
-                                    <button onClick={(event) => event.target.parentNode.parentNode.parentNode.classList.toggle('open')} />
+                                    <button onClick={handleToggle} />
                                 </div>
                                 <li><a href="#">Home</a><p></p></li>
                                 <li><a href="#">Nossas lojas</a><p></p></li>
@@ -20,7 +28,7 @@ export default function Header() {
                         </nav>
                     </div>
                 </div>
-            </header>
+            </header >
         </>
     )
 }
