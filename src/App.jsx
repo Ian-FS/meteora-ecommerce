@@ -1,4 +1,5 @@
 import './App.css'
+import Cards from './components/Cards/Cards'
 import Category from './components/Category/Category'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
@@ -12,6 +13,7 @@ function App() {
       <SearchBar></SearchBar>
       <Main />
       <Category />
+      <Cards />
     </>
   )
 }
