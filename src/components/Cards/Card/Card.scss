@@ -1,0 +1,55 @@
+.card__container {
+    max-width: 323px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    margin-bottom: 30px;
+
+    img {
+        max-width: 323px;
+        width: 100%;
+    }
+    .info__container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+        top: -3px;
+
+        padding: 20px;
+
+        border: solid 1px #00000021;
+
+        h3 {
+            //styleName: Basic Typography/Paragraph Bold;
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+        }
+        h4 {
+            font-family: var(--font-primary);
+            font-size: 13px;
+            font-weight: 400;
+            text-align: left;
+            line-height: 20px;
+        }
+        button {
+            width: 100px;
+            padding: 9px 16px 9px 16px;
+
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            text-align: center;
+
+            background-color: #9353ff;
+            color: #ffffff;
+        }
+    }
+}
