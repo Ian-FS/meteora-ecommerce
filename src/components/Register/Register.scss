@@ -1,0 +1,52 @@
+.register__container {
+    padding: 32px;
+    .register__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        border: solid 1px var(--black-primary);
+        padding: 17px;
+        p {
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0px;
+            text-align: center;
+        }
+        .input__box {
+            display: flex;
+            justify-content: center;
+            input {
+                max-width: 200px;
+
+                border: solid 1px var(--black-primary);
+
+                padding: 7px 15px 7px 15px;
+
+                font-family: var(--font-primary);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: 0px;
+                text-align: left;
+            }
+            button {
+                position: relative;
+                right: 1px;
+                background-color: var(--purple-primary);
+                border: solid 1px var(--purple-primary);
+                padding: 0px 15px 0px 15px;
+
+                color: var(--white-primary);
+                font-family: var(--font-primary);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+                letter-spacing: 0.4571428596973419px;
+                text-align: left;
+            }
+        }
+    }
+}

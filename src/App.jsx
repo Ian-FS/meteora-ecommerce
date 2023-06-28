@@ -4,6 +4,7 @@ import Category from './components/Category/Category'
 import Facilities from './components/Facilities/Facilities'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
+import Register from './components/Register/Register'
 import SearchBar from './components/SearchBar/SearchBar'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Category />
       <Cards />
       <Facilities />
+      <Register />
     </>
   )
 }
