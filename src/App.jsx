@@ -5,6 +5,7 @@ import Facilities from './components/Facilities/Facilities'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import Register from './components/Register/Register'
+import Rodape from './components/Rodape/Rodape'
 import SearchBar from './components/SearchBar/SearchBar'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Cards />
       <Facilities />
       <Register />
+      <Rodape />
     </>
   )
 }
