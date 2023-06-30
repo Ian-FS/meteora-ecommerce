@@ -3,9 +3,50 @@ header {
 
     padding: 20px;
 
+    @media screen and (min-width: 768px) {
+        padding: 10px 20px;
+    }
+
     .container__flex {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (min-width: 768px) {
+            align-items: center;
+        }
+
+        .left__header {
+            display: flex;
+
+            ul {
+                display: none;
+                list-style: none;
+
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                }
+
+                li {
+                    list-style-type: none;
+                    @media screen and (min-width: 768px) {
+                        margin-left: 20px;
+                    }
+                    a {
+                        font-family: Inter;
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        letter-spacing: 0px;
+                        text-align: left;
+
+                        @media screen and (min-width: 768px) {
+                            color: var(--white-primary);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
 
         .container__nav {
             display: flex;
@@ -69,6 +110,44 @@ header {
             }
             .open {
                 display: flex;
+            }
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .search__header {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                input {
+                    max-width: 145px;
+                    padding: 12px;
+                    border: solid 2px var(--black-primary);
+                }
+                input::placeholder {
+                    color: #6c757d;
+
+                    font-family: var(--font-primary);
+                    font-weight: 400;
+                    font-size: 13px;
+                }
+                button {
+                    border: solid 1px var(--white-primary);
+                    background-color: var(--black-primary);
+                    color: var(--white-primary);
+
+                    padding: 9px 12px 9px 12px;
+
+                    font-family: var(--font-primary);
+                    font-weight: 500;
+                    font-size: 16px;
+                }
             }
         }
     }

@@ -7,6 +7,10 @@
     padding: 20px;
     gap: 6px;
 
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
     input {
         padding: 12px;
         border: solid 2px var(--black-primary);
