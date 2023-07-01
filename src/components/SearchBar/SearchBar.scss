@@ -4,6 +4,7 @@
 
     background-color: var(--white-primary);
 
+    max-width: 767px;
     padding: 20px;
     gap: 6px;
 
@@ -12,6 +13,8 @@
     }
 
     input {
+        width: 100%;
+
         padding: 12px;
         border: solid 2px var(--black-primary);
     }
