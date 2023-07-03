@@ -2,12 +2,15 @@
     max-width: 323px;
 
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: space-between;
 
     position: relative;
 
     margin-bottom: 30px;
+
+    border: solid 1px #00000021;
+    border-radius: 10px;
 
     @media screen and (min-width: 768px) {
         max-width: 1440px;
@@ -24,13 +27,11 @@
     .info__container {
         display: flex;
         flex-direction: column;
+        width: -webkit-fill-available;
         gap: 15px;
         position: relative;
-        top: -3px;
 
         padding: 20px;
-
-        border: solid 1px #00000021;
 
         h3 {
             //styleName: Basic Typography/Paragraph Bold;
@@ -38,6 +39,9 @@
             font-size: 16px;
             font-weight: 700;
             text-align: left;
+            @media screen and (min-width: 768px) {
+                font-size: 19px;
+            }
         }
         h4 {
             font-family: var(--font-primary);
@@ -45,6 +49,9 @@
             font-weight: 400;
             text-align: left;
             line-height: 20px;
+            @media screen and (min-width: 768px) {
+                font-size: 16px;
+            }
         }
         button {
             width: 100px;
