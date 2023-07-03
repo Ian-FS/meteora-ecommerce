@@ -21,11 +21,13 @@
         display: flex;
         flex-direction: column;
         row-gap: 30px;
+        width: min-content;
+        margin: 0 auto;
 
         .info__section {
-            display: grid;
-            grid-template-columns: 0.33fr 1fr;
-            align-items: center;
+            display: flex;
+            // justify-content: center;
+            gap: 30px;
 
             .info__img {
             }
