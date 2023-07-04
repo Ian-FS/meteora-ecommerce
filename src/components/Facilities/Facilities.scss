@@ -1,7 +1,7 @@
 .facilities__container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 
     background-color: var(--black-primary);
     padding: 32px;
@@ -26,17 +26,20 @@
 
         .info__section {
             display: flex;
-            // justify-content: center;
+            align-items: center;
             gap: 30px;
+            width: 304px;
 
             .info__img {
+                img {
+                    width: 72px;
+                }
             }
 
             .info__text {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-                padding-right: 42px;
 
                 h2 {
                     font-family: var(--font-primary);
