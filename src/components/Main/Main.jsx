@@ -1,6 +1,6 @@
 import carrosselMobile from '../../assets/carrossel.svg'
 import carrosselTablet from '../../assets/carousel _ 768.svg'
-import carrosselWeb from '../../assets/carousel _ 1440.svg'
+import carrosselWeb from '../../assets/carousel_1440.svg'
 import './Main.scss'
 
 export default function Main() {
