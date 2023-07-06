@@ -8,11 +8,24 @@ import Register from './components/Register/Register'
 import Rodape from './components/Rodape/Rodape'
 import SearchBar from './components/SearchBar/SearchBar'
 import { SwiperSlide } from 'swiper/react'
-import carousel1 from './assets/BannerCarousel1_1440.svg'
-import carousel2 from './assets/BannerCarousel2_1440.svg'
-import carousel3 from './assets/BannerCarousel3_1440.svg'
+import useMediaQuery from './hooks/useMediaQuery/useMediaQuery'
+import carousel1_1440 from './assets/Desktop/Banner-carousel1_1440.png'
+import carousel2_1440 from './assets/Desktop/Banner-carousel2_1440.png'
+import carousel3_1440 from './assets/Desktop/Banner-carousel3_1440.png'
+import carousel1_768 from './assets/Tablet/Banner-carousel1_768.png'
+import carousel2_768 from './assets/Tablet/Banner-carousel2_768.png'
+import carousel3_768 from './assets/Tablet/Banner-carousel3_768.png'
+import carousel1_375 from './assets/Mobile/Banner-carousel1_375.png'
+import carousel2_375 from './assets/Mobile/Banner-carousel2_375.png'
+import carousel3_375 from './assets/Mobile/Banner-carousel3_375.png'
 
 function App() {
+
+  const isMobile = useMediaQuery('(min-width: 280px) and (max-width: 767px)');
+  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1439px)');
+  const isDesktop = useMediaQuery('(min-width: 1440px)');
+
+
 
   const settings = {
     spaceBetween: 0,
@@ -28,9 +41,27 @@ function App() {
       <Header></Header>
       <SearchBar></SearchBar>
       <Carousel settings={settings}>
-        <SwiperSlide><img src={carousel1} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={carousel2} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={carousel3} alt="" /></SwiperSlide>
+        {isMobile &&
+          <>
+            <SwiperSlide key={1}><img src={carousel1_375} alt="" /></SwiperSlide>
+            <SwiperSlide key={2}><img src={carousel2_375} alt="" /></SwiperSlide>
+            <SwiperSlide key={3}><img src={carousel3_375} alt="" /></SwiperSlide>
+          </>
+        }
+        {isTablet &&
+          <>
+            <SwiperSlide key={4}><img src={carousel1_768} alt="" /></SwiperSlide>
+            <SwiperSlide key={5}><img src={carousel2_768} alt="" /></SwiperSlide>
+            <SwiperSlide key={6}><img src={carousel3_768} alt="" /></SwiperSlide>
+          </>
+        }
+        {isDesktop &&
+          <>
+            <SwiperSlide key={7}><img src={carousel1_1440} alt="" /></SwiperSlide>
+            <SwiperSlide key={8}><img src={carousel2_1440} alt="" /></SwiperSlide>
+            <SwiperSlide key={9}><img src={carousel3_1440} alt="" /></SwiperSlide>
+          </>
+        }
       </Carousel>
       <Category />
       <Cards />

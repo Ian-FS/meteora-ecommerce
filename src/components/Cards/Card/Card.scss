@@ -1,5 +1,5 @@
 .card__container {
-    max-width: 323px;
+    max-width: 767px;
 
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     }
 
     img {
-        max-width: 323px;
+        max-width: 767px;
         width: 100%;
 
         @media screen and (min-width: 768px) {
