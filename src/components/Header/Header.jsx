@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Header.scss'
+import logo from '../../assets/logo.svg'
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +14,7 @@ export default function Header() {
             <header>
                 <div className='container__flex'>
                     <div className='left__header'>
-                        <img src="/src/assets/logo.svg" alt="logo Meteora" />
+                        <img src={logo} alt="logo Meteora" />
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Nossas lojas</a></li>
