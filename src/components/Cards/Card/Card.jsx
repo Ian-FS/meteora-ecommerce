@@ -1,16 +1,21 @@
 /* eslint-disable react/prop-types */
 import './Card.scss'
+import ViewMore from './ViewMore/ViewMore'
+import { useState } from 'react'
 
 
-export default function Card(props) {
+export default function Card({ img, product, description, value }) {
+    const [isOpenViewMore, setIsOpenViewMore] = useState(false)
+
     return (
         <div className="card__container">
-            <img src={props.img} alt="" />
+            <img className='img__card' src={img} alt="" />
             <div className='info__container'>
-                <h3>{props.product}</h3>
-                <h4>{props.description}</h4>
-                <h3>{props.value}</h3>
-                <button>Ver mais</button>
+                <h3>{product}</h3>
+                <h4>{description}</h4>
+                <h3>{value}</h3>
+                <button onClick={() => setIsOpenViewMore(true)}>Ver mais</button>
+                {isOpenViewMore && <ViewMore setIsOpenViewMore={setIsOpenViewMore} />}
             </div>
         </div>
     )

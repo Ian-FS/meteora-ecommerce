@@ -1,0 +1,42 @@
+.wrapper__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    opacity: 90%;
+    width: 100vh;
+    height: 100vh;
+    .wrapper__view-more {
+        margin: 0 auto;
+        .wrapper__header {
+            display: flex;
+            max-width: 343px;
+            width: 100%;
+
+            height: 65px;
+            padding: 18px 28px 18px 16px;
+            border: 1px;
+            gap: 20px;
+
+            background-color: var(--black-primary);
+
+            .check-circle {
+                width: 32px;
+            }
+            h1 {
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0px;
+                text-align: left;
+                color: var(--white-primary);
+            }
+            .icon-close {
+                cursor: pointer;
+            }
+        }
+    }
+}
