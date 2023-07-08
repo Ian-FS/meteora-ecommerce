@@ -4,7 +4,8 @@ import iconClose from '../../../../assets/View-More/Icon-Close.svg'
 
 
 
-export default function ViewMore({ setIsOpenViewMore }) {
+// eslint-disable-next-line react/prop-types
+export default function ViewMore({ setIsOpenViewMore, img }) {
     return (
         <div className='wrapper__background'>
             <div className='wrapper__view-more'>
@@ -16,6 +17,12 @@ export default function ViewMore({ setIsOpenViewMore }) {
                         onClick={() => setIsOpenViewMore(false)}
                         src={iconClose}
                         alt="Icone de fechar o Veja Mais" />
+                </div>
+                <div className='wrapper__body'>
+                    <img src={img} alt="" />
+                    <div className='wrapper__product-info'>
+
+                    </div>
                 </div>
             </div>
         </div>

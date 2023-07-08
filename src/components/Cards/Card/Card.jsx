@@ -15,7 +15,13 @@ export default function Card({ img, product, description, value }) {
                 <h4>{description}</h4>
                 <h3>{value}</h3>
                 <button onClick={() => setIsOpenViewMore(true)}>Ver mais</button>
-                {isOpenViewMore && <ViewMore setIsOpenViewMore={setIsOpenViewMore} />}
+                {
+                    isOpenViewMore &&
+                    <ViewMore
+                        setIsOpenViewMore={setIsOpenViewMore}
+                        img={img}
+                    />
+                }
             </div>
         </div>
     )

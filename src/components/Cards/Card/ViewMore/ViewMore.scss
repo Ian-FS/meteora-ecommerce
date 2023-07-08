@@ -1,17 +1,23 @@
 .wrapper__background {
+    display: flex;
+
+    z-index: 20;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    color: white;
+
+    background-color: white;
     opacity: 90%;
-    width: 100vh;
-    height: 100vh;
+
     .wrapper__view-more {
         margin: 0 auto;
+
         .wrapper__header {
             display: flex;
+            align-items: center;
+
             max-width: 343px;
             width: 100%;
 
@@ -36,6 +42,16 @@
             }
             .icon-close {
                 cursor: pointer;
+            }
+        }
+        .wrapper__body {
+            width: 343px;
+            height: 968px;
+            padding: 16px 16px 32px 16px;
+            border-radius: 0px 0px 4px 4px;
+
+            img {
+                width: -webkit-fill-available;
             }
         }
     }
