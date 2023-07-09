@@ -8,11 +8,12 @@
     right: 0;
     bottom: 0;
 
-    background-color: white;
-    opacity: 90%;
+    background: rgba(0, 0, 0, 0.7);
 
     .wrapper__view-more {
         margin: 0 auto;
+
+        background-color: var(--white-primary);
 
         .wrapper__header {
             display: flex;
@@ -50,8 +51,21 @@
             padding: 16px 16px 32px 16px;
             border-radius: 0px 0px 4px 4px;
 
-            img {
-                width: -webkit-fill-available;
+            .info__body {
+                width: 311px;
+                height: 920px;
+
+                display: flex;
+                flex-direction: column;
+                // gap: 24px;
+
+                img {
+                    width: -webkit-fill-available;
+                }
+                .wrapper__product-info {
+                    border: solid 1px #00000021;
+                    height: 300px;
+                }
             }
         }
     }

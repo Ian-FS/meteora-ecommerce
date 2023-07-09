@@ -19,9 +19,11 @@ export default function ViewMore({ setIsOpenViewMore, img }) {
                         alt="Icone de fechar o Veja Mais" />
                 </div>
                 <div className='wrapper__body'>
-                    <img src={img} alt="" />
-                    <div className='wrapper__product-info'>
+                    <div className='info__body'>
+                        <img src={img} alt="imagem do produto" />
+                        <div className='wrapper__product-info'>
 
+                        </div>
                     </div>
                 </div>
             </div>
