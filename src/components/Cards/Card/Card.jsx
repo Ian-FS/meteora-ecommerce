@@ -20,6 +20,9 @@ export default function Card({ img, product, description, value }) {
                     <ViewMore
                         setIsOpenViewMore={setIsOpenViewMore}
                         img={img}
+                        product={product}
+                        description={description}
+                        value={value}
                     />
                 }
             </div>
