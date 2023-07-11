@@ -2,6 +2,7 @@
     display: flex;
 
     z-index: 20;
+    overflow: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,14 +14,17 @@
     .wrapper__view-more {
         margin: 0 auto;
 
+        height: fit-content;
+
         background-color: var(--white-primary);
 
         .wrapper__header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
-            max-width: 343px;
-            width: 100%;
+            // max-width: 343px;
+            // width: 100%;
 
             height: 65px;
             padding: 18px 28px 18px 16px;
@@ -29,34 +33,40 @@
 
             background-color: var(--black-primary);
 
-            .check-circle {
-                width: 32px;
+            .title__header {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .check-circle {
+                    width: 32px;
+                }
+                h1 {
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    color: var(--white-primary);
+                }
             }
-            h1 {
-                font-family: Inter;
-                font-size: 20px;
-                font-weight: 500;
-                line-height: 24px;
-                letter-spacing: 0px;
-                text-align: left;
-                color: var(--white-primary);
-            }
+
             .icon-close {
                 cursor: pointer;
             }
         }
         .wrapper__body {
-            width: 343px;
-            height: 968px;
-            padding: 16px 16px 32px 16px;
+            // width: 343px;
+            // height: 968px;
+            padding: 16px 16px 16px 16px;
             border-radius: 0px 0px 4px 4px;
 
             .info__body {
-                width: 311px;
-                height: 920px;
+                // width: 311px;
+                // height: 920px;
 
-                display: flex;
-                flex-direction: column;
+                // display: flex;
+                // flex-direction: column;
                 // gap: 24px;
 
                 font-family: var(--font-primary);
@@ -75,51 +85,151 @@
                     position: relative;
                     top: -3px;
 
-                    padding: 24px 16px 0px 16px;
+                    padding: 24px 16px 24px 16px;
 
                     border-bottom: solid 1px #00000021;
                     border-left: solid 1px #00000021;
                     border-right: solid 1px #00000021;
-                    height: 300px;
+                    // height: 300px;
 
-                    .title__product-name {
-                        //styleName: Basic Typography/Paragraph Bold;
+                    .main-info__product {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
 
+                        .title__product-name {
+                            //styleName: Basic Typography/Paragraph Bold;
+
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 23px;
+                            text-align: left;
+                        }
+
+                        .description__product {
+                            //styleName: Basic Typography/Paragraph Small;
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 20px;
+
+                            text-align: justify;
+
+                            margin-bottom: 0;
+                        }
+
+                        .line__body {
+                            border: 1px solid #000000;
+                        }
+
+                        .value__product {
+                            //styleName: Basic Typography/H5 Heading;
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 24px;
+                        }
+
+                        .sold-by__product {
+                            //styleName: Basic Typography/Paragraph Small;
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 20px;
+
+                            color: #adb5bd;
+                        }
+                    }
+                    .color-select {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        border-top: 1px solid #d8d8d8;
+
+                        h2 {
+                            margin-top: 16px;
+                            //styleName: Basic Typography/Paragraph Small Bold;
+                            font-size: 13px;
+                            font-weight: 700;
+                            line-height: 20px;
+                        }
+                        .colors {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 16px;
+
+                            .wrapper__color {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+                                align-items: center;
+
+                                input {
+                                    width: 13px;
+                                    height: 13px;
+                                    border: 1px solid #212529;
+                                }
+                                label {
+                                    //styleName: Basic Typography/Paragraph Small;
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    color: #212529;
+                                }
+                            }
+                        }
+                    }
+                    .size-select {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        border-top: 1px solid #d8d8d8;
+
+                        h2 {
+                            margin-top: 16px;
+                            //styleName: Basic Typography/Paragraph Small Bold;
+                            font-size: 13px;
+                            font-weight: 700;
+                            line-height: 20px;
+                        }
+
+                        .sizes {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 16px;
+
+                            .wrapper__size {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+                                align-items: center;
+
+                                input {
+                                    width: 13px;
+                                    height: 13px;
+                                    border: 1px solid #212529;
+                                }
+                                label {
+                                    //styleName: Basic Typography/Paragraph Small;
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    color: #212529;
+                                }
+                            }
+                        }
+                    }
+                    .add-to-bag {
+                        width: 180px;
+                        height: 37px;
+                        padding: 9px 16px 9px 16px;
+                        gap: 10px;
+
+                        //styleName: Button/2) Button Default;
                         font-size: 16px;
-                        font-weight: 700;
-                        line-height: 23px;
-                        text-align: left;
-                    }
-
-                    .description__product {
-                        //styleName: Basic Typography/Paragraph Small;
-                        font-size: 13px;
-                        font-weight: 400;
-                        line-height: 20px;
-
-                        text-align: justify;
-
-                        margin-bottom: 0;
-                    }
-
-                    .line__body {
-                        border: 1px solid #000000;
-                    }
-
-                    .value__product {
-                        //styleName: Basic Typography/H5 Heading;
-                        font-size: 20px;
                         font-weight: 500;
-                        line-height: 24px;
-                    }
-
-                    .sold-by__product {
-                        //styleName: Basic Typography/Paragraph Small;
-                        font-size: 13px;
-                        font-weight: 400;
-                        line-height: 20px;
-
-                        color: #adb5bd;
+                        line-height: 19px;
+                        letter-spacing: 0.4571428596973419px;
+                        text-align: center;
                     }
                 }
             }
