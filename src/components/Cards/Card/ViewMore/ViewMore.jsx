@@ -43,15 +43,15 @@ export default function ViewMore({ setIsOpenViewMore, img, product, description,
                                 <h2>Cores:</h2>
                                 <div className='colors'>
                                     <div className='wrapper__color'>
-                                        <input type="radio" name='color' />
+                                        <input type="radio" name='color' id='Azul-Claro' />
                                         <label htmlFor="color">Azul Claro</label>
                                     </div>
                                     <div className='wrapper__color'>
-                                        <input type="radio" name='color' />
+                                        <input type="radio" name='color' id='Offwhite' />
                                         <label htmlFor="color">Offwhite</label>
                                     </div>
                                     <div className='wrapper__color'>
-                                        <input type="radio" name='color' />
+                                        <input type="radio" name='color' id='Preto' />
                                         <label htmlFor="color">Preto</label>
                                     </div>
                                 </div>

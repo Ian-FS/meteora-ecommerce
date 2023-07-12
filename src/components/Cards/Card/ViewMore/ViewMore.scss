@@ -166,7 +166,23 @@
                                     width: 13px;
                                     height: 13px;
                                     border: 1px solid #212529;
+                                    border-radius: 50%;
+                                    -webkit-appearance: none;
+                                    cursor: pointer;
                                 }
+                                input[id="Azul-Claro"] {
+                                    background-color: #75d7f0;
+                                }
+                                input[id="Offwhite"] {
+                                    background-color: #f3f6f7;
+                                }
+                                input[id="Preto"] {
+                                    background-color: #000000;
+                                }
+                                input:checked {
+                                    border: solid 3px #9353ff;
+                                }
+
                                 label {
                                     //styleName: Basic Typography/Paragraph Small;
                                     font-size: 13px;
@@ -207,6 +223,11 @@
                                     width: 13px;
                                     height: 13px;
                                     border: 1px solid #212529;
+                                    border-radius: 50%;
+                                    -webkit-appearance: none;
+                                }
+                                input:checked {
+                                    border: solid 3px #9353ff;
                                 }
                                 label {
                                     //styleName: Basic Typography/Paragraph Small;
