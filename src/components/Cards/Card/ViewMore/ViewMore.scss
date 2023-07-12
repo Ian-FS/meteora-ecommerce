@@ -62,12 +62,12 @@
             border-radius: 0px 0px 4px 4px;
 
             .info__body {
-                // width: 311px;
-                // height: 920px;
+                display: flex;
+                flex-direction: column;
 
-                // display: flex;
-                // flex-direction: column;
-                // gap: 24px;
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                }
 
                 font-family: var(--font-primary);
 
@@ -91,6 +91,10 @@
                     border-left: solid 1px #00000021;
                     border-right: solid 1px #00000021;
                     // height: 300px;
+
+                    @media screen and (min-width: 768px) {
+                        border: none;
+                    }
 
                     .main-info__product {
                         display: flex;
