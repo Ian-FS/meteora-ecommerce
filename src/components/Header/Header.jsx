@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import './Header.scss'
 import logo from '../../assets/logo.svg'
-export default function Header() {
+
+
+// eslint-disable-next-line react/prop-types
+export default function Header({ searchList, setSearchList }) {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -24,7 +27,7 @@ export default function Header() {
 
                     </div>
                     <div className='search__header'>
-                        <input type="text" id='input-bar' placeholder='Digite o produto' />
+                        <input type="text" onChange={(ev) => setSearchList(ev.target.value)} value={searchList} id='input-bar' placeholder='Digite o produto' />
                         <button>Buscar</button>
                     </div>
 

@@ -18,6 +18,8 @@ import carousel3_768 from './assets/Tablet/Banner-carousel3_768.svg'
 import carousel1_375 from './assets/Mobile/Banner-carousel1_375.svg'
 import carousel2_375 from './assets/Mobile/Banner-carousel2_375.svg'
 import carousel3_375 from './assets/Mobile/Banner-carousel3_375.svg'
+import { useState } from 'react'
+import { listOfProduct } from './Data'
 
 
 function App() {
@@ -26,7 +28,14 @@ function App() {
   const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1439px)');
   const isDesktop = useMediaQuery('(min-width: 1440px)');
 
+  const [searchList, setSearchList] = useState('')
 
+
+  const productFilter = listOfProduct.filter((product) => product.
+    product.toLowerCase().
+    includes(searchList.toLowerCase()))
+
+  // console.log(productFilter.map((product) => product.product)
 
   const settings = {
     spaceBetween: 0,
@@ -39,8 +48,8 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <SearchBar></SearchBar>
+      <Header searchList={searchList} setSearchList={setSearchList} />
+      <SearchBar searchList={searchList} setSearchList={setSearchList} />
       <Carousel settings={settings}>
         {isMobile &&
           <>
@@ -65,7 +74,7 @@ function App() {
         }
       </Carousel>
       <Category />
-      <Cards />
+      <Cards productFilter={productFilter} />
       <Facilities />
       <Register />
       <Rodape />

@@ -1,25 +1,36 @@
+/* eslint-disable react/prop-types */
 import Card from './Card/Card'
 import './Cards.scss'
-import camiseta from '../../assets/items/item-camiseta.svg'
-import calca from '../../assets/items/item-calca.svg'
-import tenis from '../../assets/items/item-tenis.svg'
-import jaqueta from '../../assets/items/item-jaqueta-jeans.svg'
-import oculos from '../../assets/items/item-oculos.svg'
-import bolsa from '../../assets/items/item-bolsa.svg'
+// import camiseta from '../../assets/items/item-camiseta.svg'
+// import calca from '../../assets/items/item-calca.svg'
+// import tenis from '../../assets/items/item-tenis.svg'
+// import jaqueta from '../../assets/items/item-jaqueta-jeans.svg'
+// import oculos from '../../assets/items/item-oculos.svg'
+// import bolsa from '../../assets/items/item-bolsa.svg'
 
 
 
 
 // eslint-disable-next-line react/prop-types
-export default function Cards({ setIsViewMore }) {
-
-
+export default function Cards({ setIsViewMore, productFilter }) {
 
     return (
         <div className='cards__container'>
             <p>Produtos que estão bombando!</p>
             <div className='grid__container'>
-                <Card
+                {
+                    productFilter.map((product) =>
+                        <Card
+                            key={product.product}
+                            img={product.image}
+                            product={product.product}
+                            description={product.description}
+                            value={product.value}
+                            setIsViewMore={setIsViewMore}
+                        />
+                    )
+                }
+                {/* <Card
                     img={camiseta}
                     product={'Camiseta Conforto'}
                     description={'Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.'}
@@ -60,7 +71,7 @@ export default function Cards({ setIsViewMore }) {
                     description={'Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!'}
                     value={'R$ 120,00'}
                     setIsViewMore={setIsViewMore}
-                />
+                /> */}
             </div>
         </div>
     )
