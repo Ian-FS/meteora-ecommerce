@@ -25,8 +25,15 @@
         }
 
         a {
+            cursor: pointer;
             img {
                 width: 100%;
+            }
+            img:target {
+                border: solid 4px var(--purple-primary);
+            }
+            img:hover {
+                border: solid 4px var(--purple-primary);
             }
         }
     }

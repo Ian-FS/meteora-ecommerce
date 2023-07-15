@@ -31,11 +31,12 @@ function App() {
   const [searchList, setSearchList] = useState('')
 
 
-  const productFilter = listOfProduct.filter((product) => product.
-    product.toLowerCase().
-    includes(searchList.toLowerCase()))
+  const productFilter = listOfProduct.filter((product) =>
+    product.type.toLowerCase() === searchList.toLowerCase())
 
-  // console.log(productFilter.map((product) => product.product)
+
+
+  console.log(productFilter.map((product) => product))
 
   const settings = {
     spaceBetween: 0,
@@ -73,7 +74,7 @@ function App() {
           </>
         }
       </Carousel>
-      <Category />
+      <Category setSearchList={setSearchList} />
       <Cards productFilter={productFilter} />
       <Facilities />
       <Register />
