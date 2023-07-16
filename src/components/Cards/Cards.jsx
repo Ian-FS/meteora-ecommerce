@@ -13,7 +13,7 @@ import './Cards.scss'
 
 // eslint-disable-next-line react/prop-types
 export default function Cards({ setIsViewMore, productFilter }) {
-
+    console.log(typeof productFilter)
     return (
         <div className='cards__container'>
             <p>Produtos que estão bombando!</p>

@@ -29,7 +29,10 @@
             img {
                 width: 100%;
             }
-            img:target {
+            .border-desactive {
+                border: none;
+            }
+            .border-active {
                 border: solid 4px var(--purple-primary);
             }
             img:hover {
