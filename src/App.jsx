@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import Register from './components/Register/Register'
 import Rodape from './components/Rodape/Rodape'
 import SearchBar from './components/SearchBar/SearchBar'
+import ModalRegistered from './components/ModalRegistered/ModalRegistered'
 import { SwiperSlide } from 'swiper/react'
 import useMediaQuery from './hooks/useMediaQuery/useMediaQuery'
 import carousel1_1440 from './assets/Desktop/Banner-carousel1_1440.svg'
@@ -29,6 +30,9 @@ function App() {
   const isDesktop = useMediaQuery('(min-width: 1440px)');
 
   const [searchList, setSearchList] = useState('')
+  const [isOpen, setIsOpen] = useState(false)
+
+  console.log(isOpen)
 
   var productFilter
   searchList.toLowerCase()
@@ -80,7 +84,7 @@ function App() {
       <Category setSearchList={setSearchList} searchList={searchList} />
       <Cards productFilter={productFilter} />
       <Facilities />
-      <Register />
+      <Register setIsOpen={setIsOpen} isOpen={isOpen} />
       <Rodape />
     </>
   )
