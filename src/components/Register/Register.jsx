@@ -4,12 +4,9 @@ import './Register.scss'
 
 export default function Register({ setIsOpen, isOpen }) {
 
-    function handleClick() {
-        setIsOpen(!isOpen)
-    }
     return (
         <>
-            {isOpen && <ModalRegistered />}
+            {isOpen && <ModalRegistered setIsOpen={setIsOpen} />}
             <div className='register__container'>
                 <div className='register__box'>
                     <p>
@@ -17,7 +14,7 @@ export default function Register({ setIsOpen, isOpen }) {
                     </p>
                     <div className='input__box'>
                         <input type="email" placeholder='Digite seu email' />
-                        <button onClick={handleClick}>Enviar</button>
+                        <button onClick={() => setIsOpen(true)}>Enviar</button>
                     </div>
                 </div>
             </div>
