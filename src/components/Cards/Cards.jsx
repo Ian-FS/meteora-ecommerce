@@ -22,7 +22,7 @@ export default function Cards({ setIsViewMore, productFilter }) {
                     productFilter.map((product) =>
                         <Card
                             key={product.name}
-                            img={product.image}
+                            image={product.image}
                             product={product.name}
                             description={product.description}
                             value={product.value}

@@ -36,7 +36,7 @@ export const listOfProduct = [
     },
     {
         name: 'Bolsa coringa',
-        image: './assets/items/item-bolsa.svg',
+        image: '/src/assets/items/item-bolsa.svg',
         description: 'Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!',
         value: 'R$ 120,00',
         type: 'bolsa',

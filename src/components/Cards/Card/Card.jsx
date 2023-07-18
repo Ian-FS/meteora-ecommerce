@@ -2,15 +2,15 @@
 import './Card.scss'
 import ViewMore from './ViewMore/ViewMore'
 import { useState } from 'react'
-import '../../../assets/items/item-bolsa.svg'
 
 
-export default function Card({ img, product, description, value }) {
+export default function Card({ image, product, description, value }) {
     const [isOpenViewMore, setIsOpenViewMore] = useState(false)
+
 
     return (
         <div className="card__container">
-            <img className='img__card' src={img} alt="" />
+            <img className='img__card' src={image} alt="" />
             <div className='info__container'>
                 <h3>{product}</h3>
                 <h4>{description}</h4>
