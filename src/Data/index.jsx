@@ -29,7 +29,7 @@ export const listOfProduct = [
     },
     {
         name: 'Óculos Redondo',
-        image: '../assets/items/item-oculos.svg',
+        image: '/src/assets/items/item-oculos.svg',
         description: 'Armação metálica em grafite com lentes arredondadas. Sem erro!',
         value: 'R$ 120,00',
         type: 'oculos',
