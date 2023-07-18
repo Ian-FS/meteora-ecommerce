@@ -8,7 +8,7 @@ export const listOfProduct = [
     },
     {
         name: 'Calça Alfaiataria',
-        image: '../assets/items/item-calca.svg',
+        image: '../',
         description: 'Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!',
         value: 'R$ 180,00',
         type: 'calça',
@@ -36,7 +36,7 @@ export const listOfProduct = [
     },
     {
         name: 'Bolsa coringa',
-        image: '../../../assets/items/item-bolsa.svg',
+        image: './assets/items/item-bolsa.svg',
         description: 'Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!',
         value: 'R$ 120,00',
         type: 'bolsa',

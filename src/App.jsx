@@ -19,7 +19,7 @@ import carousel1_375 from './assets/Mobile/Banner-carousel1_375.svg'
 import carousel2_375 from './assets/Mobile/Banner-carousel2_375.svg'
 import carousel3_375 from './assets/Mobile/Banner-carousel3_375.svg'
 import { useState } from 'react'
-import { listOfProduct } from './Data'
+import { listOfProduct } from './Data/index'
 
 
 function App() {
