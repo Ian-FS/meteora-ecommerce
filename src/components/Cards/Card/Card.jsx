@@ -2,6 +2,7 @@
 import './Card.scss'
 import ViewMore from './ViewMore/ViewMore'
 import { useState } from 'react'
+import '../../../assets/items/item-bolsa.svg'
 
 
 export default function Card({ img, product, description, value }) {
