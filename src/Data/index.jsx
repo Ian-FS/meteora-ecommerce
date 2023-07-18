@@ -15,7 +15,7 @@ export const listOfProduct = [
     },
     {
         name: 'Tênis Chunky',
-        image: '/src/assets/items/item-tenis.svg',
+        image: '../../src/assets/items/item-tenis.svg',
         description: 'Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.',
         value: 'R$ 250,00',
         type: 'calçado',
