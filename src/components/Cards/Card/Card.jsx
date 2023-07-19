@@ -20,7 +20,7 @@ export default function Card({ image, product, description, value }) {
                     isOpenViewMore &&
                     <ViewMore
                         setIsOpenViewMore={setIsOpenViewMore}
-                        img={img}
+                        image={image}
                         product={product}
                         description={description}
                         value={value}
